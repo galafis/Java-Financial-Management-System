@@ -1,27 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java Financial Management System - Demo</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
-        h1 { color: #333; }
-        p { color: #666; }
-        .container { max-width: 800px; margin: auto; background: #f9f9f9; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        .button { display: inline-block; background-color: #007bff; color: white; padding: 10px 15px; border-radius: 5px; text-decoration: none; margin-top: 10px; }
-        .button:hover { background-color: #0056b3; }
-    </style>
+    <title>Java Financial Management System - Gabriel Demetrios Lafis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://raw.githubusercontent.com/galafis/Java-Financial-Management-System/main/src/main/resources/static/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="container">
-        <h1>Bem-vindo ao Sistema de Gerenciamento Financeiro em Java</h1>
-        <p>Este é um projeto de demonstração para um sistema de gerenciamento financeiro pessoal desenvolvido em Java com Spring Boot.</p>
-        <p>Para mais informações sobre o projeto, incluindo funcionalidades, requisitos e como usar, por favor, visite o repositório GitHub:</p>
-        <a href="https://github.com/GabrielDemetriosLafis/Java-Financial-Management-System" class="button">Visitar Repositório GitHub</a>
-        <p>A documentação completa está disponível em português e inglês no repositório.</p>
-        <p>Autor: Gabriel Demetrios Lafis</p>
+        <header>
+            <h1>Java Financial Management System</h1>
+            <p>Um sistema robusto para gerenciamento financeiro pessoal e empresarial.</p>
+        </header>
+
+        <section class="section">
+            <h2>Sobre o Projeto</h2>
+            <p>Este projeto é uma solução completa para o gerenciamento de finanças, desenvolvido em Java com Spring Boot. Ele oferece funcionalidades para controle de receitas, despesas, orçamentos e relatórios financeiros, visando proporcionar uma visão clara e organizada da sua saúde financeira.</p>
+        </section>
+
+        <section class="section">
+            <h2>Funcionalidades Principais</h2>
+            <ul>
+                <li>Gerenciamento de Contas e Transações</li>
+                <li>Categorização de Receitas e Despesas</li>
+                <li>Definição e Acompanhamento de Orçamentos</li>
+                <li>Relatórios Financeiros Detalhados</li>
+                <li>Interface de Usuário Intuitiva (via API e potencial frontend)</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Documentação</h2>
+            <p>A documentação completa do projeto, incluindo guias de instalação, uso e detalhes técnicos, está disponível diretamente no repositório GitHub. Explore os arquivos README.md (em português e inglês) e a pasta <code>docs/</code> para mais informações.</p>
+        </section>
+
+        <div class="button-group">
+            <a href="https://github.com/galafis/Java-Financial-Management-System" class="button">Visitar Repositório GitHub</a>
+            <a href="https://github.com/galafis/Java-Financial-Management-System/blob/main/README.md" class="button">Ver Documentação (PT-BR)</a>
+            <a href="https://github.com/galafis/Java-Financial-Management-System/blob/main/README_en.md" class="button">View Documentation (EN)</a>
+        </div>
+
+        <footer>
+            <p>Desenvolvido por Gabriel Demetrios Lafis &copy; 2025</p>
+        </footer>
     </div>
+
+    <script>
+        // Exemplo de JavaScript interativo: um botão "voltar ao topo"
+        const scrollToTopButton = document.createElement("button");
+        scrollToTopButton.innerText = "↑ Topo";
+        Object.assign(scrollToTopButton.style, {
+            position: "fixed",
+            bottom: "20px",
+            right: "20px",
+            backgroundColor: "#3498db",
+            color: "white",
+            border: "none",
+            borderRadius: "5px",
+            padding: "10px 15px",
+            cursor: "pointer",
+            display: "none", // Escondido por padrão
+            zIndex: "1000"
+        });
+        document.body.appendChild(scrollToTopButton);
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        };
+
+        scrollToTopButton.onclick = function() {
+            document.body.scrollTop = 0; // Para Safari
+            document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE e Opera
+        };
+    </script>
 </body>
 </html>
 
